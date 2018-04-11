@@ -233,6 +233,7 @@ class Modal extends React.Component {
     const {
       backdrop,
       backdropClassName,
+      onBackdropClick,
       animation,
       show,
       dialogComponentClass: Dialog,
@@ -255,6 +256,7 @@ class Modal extends React.Component {
         show={show}
         containerClassName={prefix(props, 'open')}
         transition={animation ? DialogTransition : undefined}
+        onBackdropClick={onBackdropClick}
         backdrop={backdrop}
         backdropTransition={animation ? BackdropTransition : undefined}
         backdropClassName={classNames(
